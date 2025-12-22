@@ -1,0 +1,69 @@
+.news-container {
+  max-width: 1500px; /* Increased width for better use of space */
+  margin: auto;
+  padding: 20px;
+  font-family: "Arial", sans-serif;
+  background-color: #111; /* Dark background */
+  color: #fdf4dc; /* Light text color */
+}
+
+.news-container h2 {
+  text-align: center;
+  color: #f3b400; /* Yellow/orange heading */
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px; /* Added more space between cards */
+  margin-top: 20px;
+}
+
+.news-card {
+  background: #222; /* Dark background inside the news cards */
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Stronger shadow for a modern feel */
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* Deeper shadow on hover */
+}
+
+.news-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  filter: brightness(0.8); /* Darken images to match the theme */
+}
+
+.news-content {
+  padding: 15px;
+}
+
+.news-content h3 {
+  font-size: 18px;
+  margin: 0;
+  color: #f3b400; /* Yellow/orange title color */
+}
+
+.news-content p {
+  font-size: 14px;
+  color: #ddd; /* Light grey text for descriptions */
+}
+
+.news-content a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #f3b400; /* Yellow/orange link color */
+  text-decoration: none;
+}
+
+.news-content a:hover {
+  text-decoration: underline;
+  color: #ffd966; /* Lighter yellow on hover */
+}
