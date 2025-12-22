@@ -1,91 +1,88 @@
 // src/pages/Home.jsx
-
-import Header from '../components/Header';
-import Navbar from '../components/Navbar';
-
-// src/pages/Home.jsx
-// src/pages/Home.jsx
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <div className="home-container">
-      {/* Header Section */}
+
+      {/* Header */}
       <header className="header">
         <nav className="navbar">
           <h1 className="brand">Disaster Info Platform</h1>
-          
-         <ul className="nav-links">
-         <li><a href="#about">About</a></li>
-         <li><a href="#features">Features</a></li>
-         <li><a href="/login">Login</a></li> 
+
+          <ul className="nav-links">
+            <li><a href="#features">Features</a></li>
+            <li><Link to="/news">News</Link></li>
+            <li><Link to="/map">Map</Link></li>
+            <li><Link to="/guidelines">Guidelines</Link></li>
+            <li><Link to="/Quiz">Quiz</Link></li>
+            <li><Link to="/login">Login</Link></li>
           </ul>
-
-
         </nav>
-      </header>  
+      </header>
 
-      <div className="main-content">
-        {/* Hero Section */}
-        <section className="hero">
-          <div className="hero-content">
-            <h2>Stay Updated on Real-Time Disaster Information</h2>
-            <p>
-              Access comprehensive disaster reports from reliable sources in real-time. Our platform provides up-to-date
-              information to keep you safe and informed.
-            </p>
-            <button className="cta-button">Learn More</button>
+      {/* Hero Section */}
+      <section className="hero">
+        <div className="hero-content">
+          <h2>Stay Updated on Real-Time Disaster Information</h2>
+          <p>
+            Get live disaster news, safety guidelines, and location-based
+            updates through interactive maps.
+          </p>
+
+          {/* CTA Buttons */}
+          <div style={{ marginTop: "20px" }}>
+            <Link to="/news" className="cta-button">
+              📰 Latest News
+            </Link>
+
+            <Link
+              to="/map"
+              className="cta-button"
+              style={{ marginLeft: "15px" }}
+            >
+              🗺️ Live Map
+            </Link>
+
+            <Link
+              to="/guidelines"
+              className="cta-button"
+              style={{ marginLeft: "15px" }}
+            >
+              📘 Safety Guidelines
+            </Link>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Features Section */}
-        <section className="features" id="features">
-          <h2>Platform Features</h2>
-          <div className="features-grid">
-            <div className="feature-item">
-              <h3>Real-Time Updates</h3>
-              <p>Get live alerts and updates on disasters happening across the globe.</p>
-            </div>
-            <div className="feature-item">
-              <h3>Reliable Sources</h3>
-              <p>Information is aggregated from trusted sources, ensuring accuracy.</p>
-            </div>
-            <div className="feature-item">
-              <h3>Multi-Language Support</h3>
-              <p>Access disaster information in multiple languages to cater to diverse communities.</p>
-            </div>
+      {/* Features */}
+      <section className="features" id="features">
+        <h2>Platform Features</h2>
+
+        <div className="features-grid">
+          <div className="feature-item">
+            <h3>📰 Disaster News</h3>
+            <p>Real-time disaster-related news from verified sources.</p>
           </div>
-        </section>
-      </div>
 
-      
+          <div className="feature-item">
+            <h3>🗺️ Live Map Tracking</h3>
+            <p>View your current location and nearby disaster zones.</p>
+          </div>
 
-      {/* Footer Section */}
+          <div className="feature-item">
+            <h3>📘 Emergency Guidelines</h3>
+            <p>Step-by-step instructions for earthquakes, floods, fires, etc.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
       <footer className="footer">
-        <div className="footer-content">
-          <div className="footer-section about">
-            <h3>About Us</h3>
-            <p>We aim to provide a reliable platform for real-time disaster reporting, helping communities stay safe.</p>
-          </div>
-          <div className="footer-section links">
-            <h3>Quick Links</h3>
-            <ul>
-              <li><a href="#about">About</a></li>
-              <li><a href="#features">Features</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li><a href="#privacy">Privacy Policy</a></li>
-            </ul>
-          </div>
-          <div className="footer-section contact">
-            <h3>Contact Us</h3>
-            <p>Email: support@disasterinfo.com</p>
-            <p>Phone: +123 456 7890</p>
-          </div>
-        </div>
-        <div className="footer-bottom">
-          <p>&copy; 2025 Disaster Info Platform. All rights reserved.</p>
-        </div>
+        <p>© 2025 Disaster Info Platform. All rights reserved.</p>
       </footer>
+
     </div>
   );
 };
