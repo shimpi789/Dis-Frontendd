@@ -1,0 +1,379 @@
+/* ===========================
+   General Styles
+=========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+/* ===========================
+   Home Page
+=========================== */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: rgb(255, 182, 46);
+    padding: 20px;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #dcdcdc;
+}
+
+/* ===========================
+   Hero Section
+=========================== */
+.hero {
+    background: url('https://s.w-x.co/staticmaps/wu/wu/satvs1200_cur/india/animate.png') center/cover no-repeat;
+    color: rgb(238, 224, 188);
+    padding: 100px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: purple;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #218838;
+}
+
+/* ===========================
+   Features Section
+=========================== */
+/* ===========================
+   Features Section (Upgraded)
+=========================== */
+
+.features {
+    padding: 80px 20px;
+    background: rgb(21, 20, 20);
+    text-align: center;
+}
+
+
+.features h2 {
+    font-size: 2.6rem;
+    color: #f3b400; /* Yellow accent */
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+/* Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Feature Card */
+.feature-item {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 30px 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+
+/* Hover Effect */
+.feature-item:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 18px 40px rgba(243, 180, 0, 0.25);
+}
+
+/* Feature Title */
+.feature-item h3 {
+    font-size: 1.6rem;
+    color: #f3b400;
+    margin-bottom: 14px;
+}
+
+/* Feature Description */
+.feature-item p {
+    font-size: 1rem;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+/* Subtle border glow on hover */
+.feature-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    border: 1px solid rgba(243, 180, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.feature-item:hover::after {
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .features h2 {
+        font-size: 2.1rem;
+    }
+}
+
+
+/* ===========================
+   Alerts Section
+=========================== */
+.alerts {
+    padding: 60px 20px;
+    background-color: #0077cc;
+    color: white;
+    text-align: center;
+}
+
+.alerts h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.alerts-list {
+    list-style: none;
+    font-size: 1.1rem;
+}
+
+.alerts-list li {
+    margin-bottom: 10px;
+}
+
+/* ===========================
+   Footer Section
+=========================== */
+.footer {
+    background-color: #343a40;
+    color: white;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.footer-section {
+    width: 100%;
+    text-align: center;
+}
+
+.footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.footer-section p,
+.footer-section ul {
+    font-size: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #dcdcdc;
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    font-size: 1rem;
+    text-align: center;
+    color: #dcdcdc;
+}
+
+/* ===========================
+   Background Container
+=========================== */
+.background-container {
+    background: radial-gradient(
+        circle at top,
+        rgba(243, 180, 0, 0.15),
+        #0b0f14 70%
+    );
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+/* ===========================
+   LOGIN PAGE (UPGRADED)
+=========================== */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.login-form {
+    background: rgba(20, 20, 20, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 2.5rem 2.2rem;
+    border-radius: 14px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+    width: 360px;
+    color: #fdf4dc;
+    animation: fadeUp 0.6s ease;
+}
+
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 1.8rem;
+    font-size: 1.9rem;
+    color: #f3b400;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #fdf4dc;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 0.8rem 0.9rem;
+    margin-bottom: 1.2rem;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fdf4dc;
+    font-size: 0.95rem;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.login-form input:focus {
+    outline: none;
+    border-color: #f3b400;
+    box-shadow: 0 0 0 2px rgba(243, 180, 0, 0.25);
+}
+
+.login-button {
+    width: 100%;
+    padding: 0.85rem;
+    background: linear-gradient(135deg, #f3b400, #ff9800);
+    color: #111;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(243, 180, 0, 0.4);
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===========================
+   Emergency Page (unchanged)
+=========================== */
+.emergency-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.emergency-form {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    border-radius: 8px;
+    width: 350px;
+}
