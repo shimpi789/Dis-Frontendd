@@ -13,7 +13,8 @@ const News = () => {
     const fetchNews = async () => {
       try {
         setLoading(true);
-        const response = await axios.get("http://localhost:3000/api/news");
+        const response = await axios.get("https://dis-frontendd.onrender.com/api/news"
+        );
 
         const disasterKeywords = [
           "disaster",
